@@ -1,0 +1,262 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Общие настройки */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            overflow-x: hidden;
+            overflow-y: auto; /* Разрешаем вертикальную прокрутку */
+        }
+        .background {
+            background: url('lmave.gif') no-repeat center center;
+            width: 100%;
+            height: 80vh; /* Высота на весь экран */
+            position: relative;
+            overflow: hidden;
+            background-size: cover; /* Убедитесь, что фон покрывает весь блок */
+            background-position: center 60%; /* Поднимаем изображение на 20% от высоты блока */
+        }
+
+        /* Полупрозрачный слой */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+            text-align: center;
+            color: #fff;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Анимации заголовка и подзаголовка */
+        .title {
+            font-size: 0;
+            margin: 3em;
+            animation: slideInLeft 2.3s ease-out;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            margin: 0;
+            animation: slideInRight 2.3s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+             
+        /* Стиль для текста под GIF */
+        .text-section {
+            opacity: 1;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            padding: 200px;
+            height: auto;
+            text-align: left;
+            opacity: 1; /* Прозрачность сразу */
+            transition: opacity 1s ease-out; /* Плавное появление */
+        }
+
+        .text-section.visible {
+            opacity: 1; /* Делает секцию видимой при прокрутке */
+        }
+
+        .text-section h1 {
+            font-size: 56px;
+            font-weight: 600;
+        }
+
+        .text-section .subtitle {
+            color: #8e8e93;
+            font-size: 35px;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        #readButton {
+            padding: 20px 40px;
+            font-size: 24px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        #readButton:hover {
+            background-color: #45a049;
+        }
+
+        /* Новый график акций */
+        #newChart {
+            width: 150px;
+            height: 80px;
+            position: absolute;
+            top: 10px; /* Отступ от верхнего края */
+            left: 10px; /* Отступ от левого края */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background">
+        <div class="overlay">
+            <div class="content">
+                <h1 class="title">Добро пожаловать в раздел  Lamborghini!</h1>
+            </div>
+        </div>
+    </div>
+    <a href=" https://t.me/top_avatarki52">  <h1> ●-Наш Телеграм канал подпишитесь если хотите узнать больше информаци и больше фотографии спортивных машын -○</h1></a>
+        
+    <a href="https://www.autotrader.com/cars-for-sale/all-cars/lamborghini/huracan/sacramento-ca?newSearch=true&zip=94203">   
+        <h1>Переходите на эту ссылку, чтобы купить Lamborghini за низкую цену</h1>
+    </a> 
+    
+    <div class="text-section" id="text">
+        <div>
+            <h1>Lamborghini был создан в 1963 году.</h1>
+            <p>Основателями Lamborghini считаются:</p>
+            <p>1. <strong>Ферруччо Ламборгини (Ferruccio Lamborghini)</strong> — основатель компании Automobili Lamborghini S.p.A. Вдохновленный автомобилями Ferrari, он решил создать собственный бренд, чтобы производить роскошные спортивные автомобили.</p>
+            <p>Официальной датой основания Lamborghini считается 7 мая 1963 года, когда была зарегистрирована компания Automobili Lamborghini S.p.A. Компания сразу заявила о себе как о производителе высококачественных спортивных автомобилей.</p>
+            <p>Lamborghini — итальянский производитель автомобилей, который специализируется на создании роскошных спортивных автомобилей и суперкаров. Вот основные аспекты, которые стоит знать о Lamborghini:</p>
+            <h3>История</h3>
+            <ul>
+                <li><strong>Основание</strong>: Lamborghini была основана в 1963 году Ферруччо Ламборгини. Первая модель, Lamborghini 350 GT, была представлена в 1964 году.</li>
+                <li><strong>Золотые годы</strong>: В 1970-х годах компания выпустила ряд знаковых моделей, таких как Miura и Countach, которые стали символами стиля и производительности.</li>
+                <li><strong>Современность</strong>: В 1990-х годах Lamborghini столкнулась с финансовыми трудностями, но была спасена благодаря инвестициям Volkswagen Group, что позволило компании продолжить разработку новых моделей.</li>
+            </ul>
+            <h3>Модельный ряд</h3>
+            <ul>
+                <li><strong>Aventador</strong>: Флагманский суперкар с V12 двигателем, который предлагает выдающуюся производительность и современный дизайн.</li>
+                <li><strong Huracán</strong>: Спортивный автомобиль с V10 двигателем, известный своей динамикой и управляемостью.</li>
+                <li><strong>Urus</strong>: Роскошный внедорожник, который сочетает в себе производительность Lamborghini с практичностью SUV.</li>
+            </ul>
+            <h3>Технологии и инновации</h3>
+            <ul>
+                <li><strong>Двигатели</strong>: Lamborghini использует мощные двигатели V10 и V12, которые обеспечивают исключительные характеристики и производительность.</li>
+                <li><strong>Платформа</strong>: Модели Lamborghini построены на современных платформах, обеспечивающих отличную управляемость и устойчивость на дороге.</li>
+                <li><strong>Дизайн</strong>: Дизайн автомобилей Lamborghini часто характеризуется агрессивными линиями и уникальными формами, подчеркивающими их спортивный характер.</li>
+            </ul>
+            <h3>Дизайн и стиль</h3>
+            <ul>
+                <li><strong>Спортивный стиль</strong>: Lamborghini известна своим футуристическим и агрессивным дизайном. Элементы, такие как угловатые линии и крупные воздухозаборники, подчеркивают мощь автомобилей.</li>
+                <li><strong>Интерьер</strong>: Внутри автомобилей Lamborghini используются высококачественные материалы и передовые технологии, включая цифровые приборные панели и индивидуальные настройки.</li>
+            </ul>
+            <h3>Производство</h3>
+            <ul>
+                <li><strong>Глобальное присутствие</strong>: Заводы Lamborghini расположены в Санта-Агате-Болоньезе, Италия. Компания поддерживает высокие стандарты качества и производительности.</li>
+                <li><strong>Качество и инновации</strong>: Lamborghini уделяет большое внимание качеству сборки и инновациям в области автомобильной инженерии и дизайна.</li>
+            </ul>
+            <h3>Спорт и участие в гонках</h3>
+            <ul>
+                <li><strong>Motorsport</strong>: Lamborghini активно участвует в различных гоночных сериях, включая Super Trofeo и гонки GT.</li>
+                <li><strong>Lamborghini Squadra Corse</strong>: Спортивное подразделение Lamborghini, занимающееся разработкой гоночных автомобилей и организацией гоночных событий.</li>
+            </ul>
+            <h3>Репутация и позиционирование</h3>
+            <ul>
+                <li><strong>Роскошный класс</strong>: Lamborghini конкурирует с такими брендами, как Ferrari и McLaren, предлагая автомобили, которые сочетают в себе высокую производительность, эксклюзивность и стиль.</li>
+                <li><strong>Престиж и эксклюзивность</strong>: Марка ассоциируется с высоким уровнем престижности и эксклюзивности, а автомобили Lamborghini часто выбирают те, кто ценит уникальный дизайн и выдающуюся производительность.</li>
+            </ul>
+            Lamborghini, основанная в 1963 году, предлагает широкий выбор спортивных и роскошных автомобилей. Вот краткий обзор популярных моделей Lamborghini, их предназначения, годы выпуска и особенности:
+            
+            <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+                <h2 style="color: #0056b3;">Обзор популярных моделей Lamborghini</h2>
+                <ul>
+                    <li><strong>Lamborghini Aventador</strong>: Флагманский суперкар с двигателем V12, представленный в 2011 году. <br>Коды поколений: LP 700-4, LP 750-4 Superveloce, Ultimae.</li>
+                    <li><strong>Lamborghini Huracán</strong>: Спортивный автомобиль с двигателем V10, представленный в 2014 году. <br>Коды поколений: LP 610-4, Performante, STO.</li>
+                    <li><strong>Lamborghini Urus</strong>: Роскошный внедорожник, представленный в 2018 году. <br>Коды поколений: 4.0 V8 Biturbo.</li>
+                </ul>
+                
+                <p><strong>Общее количество моделей:</strong> За свою историю Lamborghini создала множество уникальных моделей и модификаций, каждая из которых имеет свои особенности и предназначение.</p>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вставка фотографии</title>
+    <style>
+        .photo-container {
+            width: 100%;
+            text-align: center; /* Измените на left или right для выравнивания по горизонтали */
+            position: center; /* Позволяет использовать position для дочерних элементов */
+        }
+        .photo {
+            max-width: 100%;
+            height: center;
+            position: relative; /* Позволяет перемещать фото относительно контейнера */
+            top: 0; /* Перемещение по вертикали */
+        }
+        .left {
+            text-align: center;
+        }
+        .right {
+            text-align: right;
+        }
+        .move-up {
+            top: 60px; /* Измените значение для перемещения вверх */
+        }
+        .move-down {
+            top: -200px; /* Измените значение для перемещения вниз */
+        }
+    </style>
+</head>
+<body>
+    <div class="photo-container center"> <!-- Измените класс на left, center или right для выравнивания по горизонтали -->
+        <img src="emL.png" alt="Фотография" class="photo move-down" style="width: 350px; height: auto;">
+        <!-- Измените класс move-down на move-up для перемещения вверх -->
+    </div>
+</body>
+</html>

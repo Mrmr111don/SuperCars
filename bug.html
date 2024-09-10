@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотогалерея</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            overflow-y: auto; /* Для возможности прокрутки страницы */
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .photo {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .photo .view-button {
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            padding: 10px 100px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        .fullscreen img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .fullscreen .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="photo">
+            <img src="bg (1).jpg" alt="Фото 2">
+            <button class="view-button">Просмотреть</button>
+        </div>
+        <div class="photo">
+            <img src="bg (2).jpg" alt="Фото 3">
+            <button class="view-button">Просмотреть</button>
+        </div>  
+        <div class="photo">
+            <img src="bg (3).jpg" alt="Фото 4">
+            <button class="view-button">Просмотреть</button>
+        </div>  
+        <div class="photo">
+            <img src="bg (4).jpg" alt="Фото 5">
+            <button class="view-button">Просмотреть</button>
+        </div>  
+        <div class="photo">
+            <img src="bg (5).jpg" alt="Фото 6">
+            <button class="view-button">Просмотреть</button>
+        </div>  
+        <div class="photo">
+            <img src="bg (6).jpg" alt="Фото 7">
+            <button class="view-button">Просмотреть</button>
+        </div>    
+        <div class="photo">
+            <img src="bg (7).jpg" alt="Фото 9">
+            <button class="view-button">Просмотреть</button>
+        </div>  
+        <div class="photo">
+            <img src="bg (8).jpg" alt="Фото 10">
+            <button class="view-button">Просмотреть</button>
+        </div>  
+        <div class="photo">
+            <img src="bg (9).jpg" alt="Фото 11">
+            <button class="view-button">Просмотреть</button>
+        </div> 
+        <div class="photo">
+            <img src="bg (10).jpg" alt="Фото 12">
+            <button class="view-button">Просмотреть</button>
+        </div> 
+        <div class="photo">
+            <img src="bg (11).jpg" alt="Фото 13">
+            <button class="view-button">Просмотреть</button>
+        </div>  
+    </div>
+
+    <div class="fullscreen">
+        <span class="close">&times;</span>
+        <img id="fullscreen-img" src="" alt="Полноэкранное изображение">
+    </div>
+
+    <script>
+        document.querySelectorAll('.view-button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const imgSrc = e.target.previousElementSibling.src;
+                document.getElementById('fullscreen-img').src = imgSrc;
+                document.querySelector('.fullscreen').style.display = 'flex';
+            });
+        });
+
+        document.querySelector('.fullscreen .close').addEventListener('click', () => {
+            document.querySelector('.fullscreen').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

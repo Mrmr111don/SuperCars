@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница продуктов</title>
+    <link rel="stylesheet" href="ppp.css">
+    <style>
+        /* Сброс стилей */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Стиль для body */
+        body {
+            background: linear-gradient(120deg, #f0f4f7, #c0dff7);
+            color: #333;
+            padding: 20px;
+            transition: background 0.5s ease;
+        }
+
+        /* Основной контейнер */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ряды и карточки продуктов */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            flex: 1 1 calc(25% - 20px);
+            margin: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Заголовки и тексты */
+        h2 {
+            font-size: 1.8rem;
+            margin: 20px 0;
+            color: #333;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        /* Стиль кнопок */
+        button {
+            background: linear-gradient(90deg, #007aff, #005bb5);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 10px 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #005bb5, #003a75);
+            transform: scale(1.05);
+        }
+
+        /* Медиа-запросы для адаптивности */
+        @media (max-width: 992px) {
+            .card {
+                flex: 1 1 calc(33.333% - 20px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+
+        /* Плавные анимации для всех переходов */
+        .card, button {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Основной контейнер -->
+    <div class="container">
+        <!-- Ряд продуктов 1: MacBook и iPad Pro -->
+        <div class="row">
+            <div class="card">
+                <a href="BMW1.html">
+                    <img src="B2.jpg" alt="MacBook Air">
+                </a>
+                <h2>BMW1</h2>
+            </div>
+            <div class="card">
+                <a href="Porsche.html">
+                    <img src="F1.jpg" alt="iPad Pro">
+                </a>
+                <h2>Porsche</h2>
+       
+            </div>
+        </div>
+
+        <!-- Ряд продуктов 2: Apple Intelligence и Apple Watch -->
+        <div class="row">
+            <div class="card">
+                <a href="Porsche.html">
+                    <img src="P1.jpg" alt="Apple Intelligence">
+                </a>
+                <h2>Porsche</h2>
+
+
+            </div>
+            <div class="card">
+                <a href="Lambarghini.html">
+                    <img src="L3.jpg" alt="Apple Watch">
+                </a>
+                <h2>Lambarghini</h2>
+            </div>
+        </div>
+
+        <!-- Ряд продуктов 3: Apple Card и Trade-In -->
+        <div class="row">
+            <div class="card">
+                <a href="McLaren.html">
+                    <img src="MC2.jpg" alt="Apple Card">
+                </a>
+                <h2>McLaren</h2>
+            </div>
+            <div class="card">
+                <a href="Ferrari.html">
+                    <img src="F1.jpg" alt="Trade In">
+                </a>
+                <h2>Ferarri</h2>
+            </div>
+                    </div>
+        <div class="card">
+            <a href="BMW1.html">
+                <img src="B2.jpg" alt="fgdf">
+            </a>
+            <h2></h2>
+            <div class="card">
+                <a href="Dodge.html">
+                    <img src="D2.jpg" alt="fgdf">
+                </a>
+                <h2></h2>
+                <div class="card">
+                    <a href="Porsche.html">
+                        <img src="Pr.jpg" alt="fgdf">
+                    </a>
+                    <h2></h2>
+                        <div class="card">
+            <a href="Lamborghini.html">
+                <img src="L1.jpg" alt="fgdf">
+            </a>
+            <h2></h2>
+        </div>
+
+        <!-- Ряд телешоу -->
+        <div class="row">
+            <div class="card">
+                <a href="GTR.html">
+                    <img src="G2.jpg" alt="Bad Monkey">
+                </a>
+                <h2>GTR</h2>
+            </div>
+            <div class="card">
+                <a href="Supra.html">
+                    <img src="S3.jpg" alt="Napoleon">
+                </a>
+                <h2>Supra</h2>
+            </div>
+            <div class="card">
+                <a href="Dodge.html">
+                    <img src="D1.jpg" alt="MLS Season Pas">
+                </a>
+                <h2>Dodge</h2>
+            </div>
+            <div class="card">
+                <a href="BMW1.html">
+                    <img src="B1.jpg" alt="fgdf">
+                </a>
+                <h2>BMW</h2>
+    </div>
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Карусель изображений</title>
+      <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+    
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #f4f4f4;
+        }
+    
+        .carousel-container {
+          width: 1100px;
+          overflow: hidden;
+        }
+    
+        .carousel {
+          display: flex;
+          transition: transform 3s ease-in-out;
+        }
+    
+        .carousel img {
+          width: 1100px;
+          height: 800px;
+          object-fit: cover;
+        }
+      </style>
+    </head>
+    <body>
+    
+    <div class="carousel-container">
+      <div class="carousel" id="carousel">
+        <img src="D1.jpg" alt="Image 1">
+        <img src="B2.jpg" alt="Image 2">
+        <img src="G1.jpg" alt="Image 3">
+        <img src="A2.jpg" alt="Image 4">
+        <img src="M2.jpg" alt="Image 5">
+        <img src="Ch.jpg" alt="Image 6">
+        <img src="F2.jpg" alt="Image 7">
+        <img src="Mi1.jpg" alt="Image 8">
+        <img src="Mc2.jpg" alt="Image 9">
+        <img src="Б2.jpg" alt="Image 10">
+        <img src="Ma1.jpg" alt="Image 11">
+        <img src="Pr2.jpg" alt="Image 12">
+        <img src="L4.jpg" alt="Image 13">
+        <img src="S2.jpg" alt="Image 14">
+      </div>
+    </div>
+    
+    <script>
+      const carousel = document.getElementById('carousel');
+      const images = document.querySelectorAll('.carousel img');
+      let index = 0;
+      const totalImages = images.length;
+    
+      function moveCarousel() {
+        index++;
+        if (index >= totalImages) {
+          index = 0;
+        }
+        carousel.style.transform = `translateX(${-index * 1100}px)`;
+      }
+    
+      setInterval(moveCarousel, 5000);
+    </script>
+    
+    </body>
+    </html>
+    
