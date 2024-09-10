@@ -1,0 +1,435 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Общие настройки */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        .background {
+            background: url('bbb.gif') no-repeat center center/cover;
+            width: 100%;
+            height: 80vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Полупрозрачный слой */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+            text-align: center;
+            color: #fff;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Анимации заголовка и подзаголовка */
+        .title {
+            font-size: 3em;
+            margin: 0;
+            animation: slideInLeft 2.3s ease-out;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            margin: 0;
+            animation: slideInRight 2.3s ease-out;
+        }
+
+        /* Ключевые кадры для анимаций */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes bounceIn {
+            from, 20%, 40%, 60%, 80%, to {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Стиль для текста под GIF */
+        .text-section {
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            display: flex;
+            justify-content:left;
+            align-items: left;
+            height: 50vh;
+            text-align:left;
+        }
+
+        .text-section h1 {
+            font-size: 56px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .text-section .subtitle {
+            color: #8e8e93;
+            font-size: 35px;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Слой с GIF -->
+    <div class="background">
+        <div class="overlay">
+            <div class="content">
+                <h1 class="title">Добро пожаловать на сайт Авто мир</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Слой с текстом под GIF -->
+    <div class="text-section">
+        <div>
+            <h1>Авто мир.</h1>
+            <h1 class="subtitle">Лучший способ узнать больше об спортивных автомобилей легко и просто.</h1>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+        <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Store Menu</title>
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        /* Фиксированное меню */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            z-index: 1000;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Отступ для основного контента, чтобы меню не закрывало его */
+        .main-content {
+            margin-top: 60px; /* Поменяйте значение в зависимости от высоты меню */
+        }
+
+        /* Стили для меню */
+        .main-menu {
+            list-style: none;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .main-menu li {
+            margin: 0 15px;
+        }
+
+        .menu-icon {
+            height: 40px; /* Пример размера иконки */
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .product-item {
+            text-align: center;
+            max-width: 200px; /* Ограничение по ширине */
+            position: relative; /* Для анимации */
+        }
+
+        .product-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease; /* Анимация масштабирования */
+        }
+
+        .product-item img.scale-down {
+            transform: scale(0.9); /* Пример масштабирования при нажатии */
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <nav>
+        <ul class="main-menu">
+            <li>
+                <a href="#">
+                   
+                </a>
+            </li>
+            <li><a href="ppp.html" target="_blank"><img src="ppp.png" alt="Ferrari" style="width:80px;height:40px;"></a></li>
+            <li><a href="ferrari.html" target="_blank">Ferrari</a></li>
+            <li><a href="dodge.html" target="_blank">Dodge</a></li>
+            <li><a href="bugatti.html" target="_blank">Bugatti</a></li>
+            <li><a href="porsche.html" target="_blank">Porsche</a></li>
+            <li><a href="camaro.html" target="_blank">Camaro</a></li>
+            <li><a href="mclaren.html" target="_blank">McLaren</a></li>
+            <li><a href="lamborghini.html" target="_blank">Lamborghini</a></li>
+            <li><a href="supra.html" target="_blank">Supra</a></li>
+            <li><a href="mazda.html" target="_blank">Mazda</a></li>
+            <li><a href="gtr.html" target="_blank">GTR</a></li>
+            <li><a href="mitsubishi.html" target="_blank">Mitsubishi</a></li>
+            <li><a href="audi.html" target="_blank">Audi</a></li>
+            <li><a href="BMW1.html" target="_blank">BMW</a></li>
+            <li><a href="Mustang.html" target="_blank">Mustang</a></li>
+            
+        </ul>
+    </nav>
+  </header>
+  <section class="main-content fade-transition">
+    <div class="products">
+        <div class="product-item">
+            <a href="BMW.html?image=mmm.png&text=Макинтош">
+                <img src="mmm.png" alt="HomePod">
+                <p>BMW</p>
+            </a>
+        </div>
+        
+        <!-- McLaren -->
+        <div class="product-item">
+            <a href="mac.html?image=DSC.png&text=Макинтош">
+                <img src="DSC.png" alt="AirTag">
+                <p>McLaren</p>
+            </a>
+        </div>
+        
+        <!-- Ferrari -->
+        <div class="product-item">
+            <a href="fir.html?image=fff.png&text=Макинтош">
+                <img src="fff.png" alt="Макинтош">
+                <p>Firarri</p>
+            </a>
+        </div>
+        
+        <!-- Dodge -->
+        <div class="product-item">
+            <a href="dog.html?image=bbb.png&text=Айфон">
+                <img src="bbb.png" alt="Айфон">
+                <p>Dodge</p>
+            </a>
+        </div>
+        
+        <!-- Bugatti -->
+        <div class="product-item">
+            <a href="bug.html?image=ccc.png&text=Айпад">
+                <img src="ccc.png" alt="Айпад">
+                <p>Bugatti</p>
+            </a>
+        </div>
+        
+        <!-- Porsche -->
+        <div class="product-item">
+            <a href="por.html?image=DC.png&text=Макинтош">
+                <img src="DC.png" alt="Apple Watch">
+                <p>Porsche</p>
+            </a>
+        </div>
+        
+        <!-- Chevrolet Camaro -->
+        <div class="product-item">
+            <a href="cam.html?image=DS.png&text=Макинтош">
+                <img src="DS.png" alt="Наушники AirPods">
+                <p>Chevrolet Camaro</p>
+            </a>
+        </div>
+        
+        <!-- Lamborghini -->
+        <div class="product-item">
+            <a href="lam.html?image=kkk.png&text=Макинтош">
+                <img src="kkk.png" alt="Apple TV 4K">
+                <p>Lamborghini</p>
+            </a>
+        </div>
+        
+        <!-- Toyota Supra -->
+        <div class="product-item">
+            <a href="sup.html?image=nnn.png&text=Макинтош">
+                <img src="nnn.png" alt="HomePod">
+                <p>Toyota Supra</p>
+            </a>
+        </div>
+        
+        <!-- Mazda -->
+        <div class="product-item">
+            <a href="maz.html?image=RF.png&text=Макинтош">
+                <img src="RF.png" alt="HomePod">
+                <p>Mazda</p>
+            </a>
+        </div>
+        
+        <!-- Mustang -->
+        <div class="product-item">
+            <a href="mus.html?image=SVFD.png&text=Макинтош">
+                <img src="SVFD.png" alt="HomePod">
+                <p>Mustang</p>
+            </a>
+        </div>
+        
+        <!-- GTR -->
+        <div class="product-item">
+            <a href="GTR.html?image=vvv.png&text=Макинтош">
+                <img src="vvv.png" alt="HomePod">
+                <p>GTR</p>
+            </a>
+        </div>
+        
+        <!-- Mitsubisi -->
+        <div class="product-item">
+            <a href="mit.html?image=xxx.png&text=Макинтош">
+                <img src="xxx.png" alt="HomePod">
+                <p>Mitsubisi</p>
+            </a>
+        </div>
+        
+        <!-- Audi -->
+        <div class="product-item">
+            <a href="aud.html?image=zzz.png&text=Макинтош">
+                <img src="zzz.png" alt="HomePod">
+                <p>Audi</p>
+            </a>
+        </div>
+        <!-- Оставляем как есть -->
+    </div>
+  </section>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кнопка-ссылка</title>
+  <style>
+    .redirect-button {
+        background: linear-gradient(90deg, #007aff, #005bb5);
+        display: inline-block;
+        padding: 1em 2em;
+        font-size: 1em;
+        color: #fff;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        top: 10px;
+    }
+
+    .redirect-button:hover {
+        background: linear-gradient(90deg, #005bb5, #003a75);
+        transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <a href="оставить отзыв.html" class="redirect-button">Оставить отзыв</a>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 200vh; /* Чтобы был эффект прокрутки */
+        }
+
+        .arrow {
+            position: absolute;
+            bottom: 1%;
+            left: 90%;
+            transform: translateX(-50%);
+            font-size: 100px;
+            cursor: pointer;
+            animation: bounce 2s infinite;
+            color: #00b718;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translate(-50%, 0);
+            }
+            40% {
+                transform: translate(-50%, -10px);
+            }
+            60% {
+                transform: translate(-50%, -5px);
+            }
+        }
+    </style>
+    <script>
+        function scrollToSection() {
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: "smooth"
+            });
+        }
+    </script>
+    <title>Стрелка вниз</title>
+</head>
+<body>
+
+<div class="arrow" onclick="scrollToSection()">&#8595;</div>
+
+</body>
+</html>
